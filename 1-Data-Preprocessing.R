@@ -29,6 +29,7 @@ data$zero <- ifelse(data$Precipitation==0,1,0)
 df_zero <- data%>%group_by(Area) %>% summarise(sum_zero = sum(zero)) %>% mutate(sum_nonzero = 353-sum_zero)
 df_plot <- melt(df_zero)
 # 함수형 데이터
+fdelivery$Date <- as.Date(fdelivery$Date)
 df_del <- fdelivery[,-1]
 names(fdelivery)[1] <- c("Date")
 # 지역별로 스케일링
