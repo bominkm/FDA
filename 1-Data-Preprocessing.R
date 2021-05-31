@@ -54,6 +54,7 @@ df_scale <- df_copy[,-1]
 df_del_plot <- melt(df_copy, id.vars='Date')
 df_copy$mean<-apply(df_copy[,-1],1,mean)
 
+
 ### 지도 데이터 ###
 df_map_info <- map@data
 df_map <- fortify(map)
